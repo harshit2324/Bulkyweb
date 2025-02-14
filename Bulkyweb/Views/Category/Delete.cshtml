@@ -1,37 +1,53 @@
 ﻿@model Category
 
-<form method="post">
 
-    <input asp-for="id" hidden/>
-    <div class="border p-3 mt-4">
-        <div class="row pb-2">
-            <h2 class="text-primary">
-                delete category
-            </h2>
-            <hr />
-        </div>
-        <div class="mb-3 row p-1">
-
-            <lable asp-for="Name" class="p-0 ">Category Name</lable>
-            <input asp-for="Name" disabled class="form-control" />
-           
-        </div>
-        <div class="mb-3 row p-1">
-            <lable asp-for="DisplayOrder" class="p-0">Display order</lable>
-            <input asp-for="DisplayOrder" disabled class="form-control" />
-
-        </div>
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
         <div class="row">
-            <div class="col-6 col-md-3">
-                <button class="btn btn-danger form-control" type="submit">delete</button>
-            </div>
-            <div class="col-6 col-md-3">
-                <a asp-controller="Category" asp-action="index" class="btn btn-secondary border  form-control"> back to list </a>
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2 ">
+                    create category
+                </h2>
             </div>
         </div>
-
-
     </div>
+    <div class="card-body p-4  ">
+        <form method="post">
 
-</form>
+            <input asp-for="id" hidden />
+            <div class="border p-3 mt-4">
+                <div class="row pb-2">
+                    <h2 class="text-primary">
+                        delete category
+                    </h2>
+                    <hr />
+                </div>
+                <div class="mb-3 row p-1">
+
+                    <lable asp-for="Name" class="p-0 ">Category Name</lable>
+                    <input asp-for="Name" disabled class="form-control" />
+
+                </div>
+                <div class="mb-3 row p-1">
+                    <lable asp-for="DisplayOrder" class="p-0">Display order</lable>
+                    <input asp-for="DisplayOrder" disabled class="form-control" />
+
+                </div>
+                <div class="row">
+                    <div class="col-6 col-md-3">
+                        <button class="btn btn-danger form-control" type="submit">delete</button>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a asp-controller="Category" asp-action="index" class="btn btn-secondary border  form-control"> back to list </a>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
 
