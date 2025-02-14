@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Bulky.Data.Access.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(ICategoryRepsitory))]
     [Migration("20250207034817_InitialCreate")]
     partial class InitialCreate
     {
