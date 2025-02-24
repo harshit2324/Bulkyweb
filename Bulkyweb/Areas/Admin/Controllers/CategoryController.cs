@@ -3,6 +3,8 @@ using Bulky.Data.Access.Data;
 using Bulky.Models;
 using Microsoft.AspNetCore.Mvc;
 using Bulky.Data.Access.Repository;
+using System.ComponentModel.Design;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Bulkyweb.Areas.Admin.Controllers
 {
@@ -18,6 +20,7 @@ namespace Bulkyweb.Areas.Admin.Controllers
         public IActionResult Index()
         {
             List<Category> objCategoryList = _unitOfWork.Category.getAll().ToList();
+           
             return View(objCategoryList);
         }
 
