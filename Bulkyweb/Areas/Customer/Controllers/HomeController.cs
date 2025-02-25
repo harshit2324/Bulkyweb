@@ -3,6 +3,8 @@ using Bulky.Data.Access.Repository.IRepository;
 using Bulky.Models;
 using Microsoft.AspNetCore.Mvc;
 
+
+
 namespace Bulkyweb.Areas.Customer.Controllers
 {
     [Area("Customer")]
@@ -21,6 +23,12 @@ namespace Bulkyweb.Areas.Customer.Controllers
         {
             IEnumerable<Product> productList = _unitOfWork.Product.getAll(includeProperties: "Category");
             return View(productList);
+        }
+
+        public IActionResult Details(int productId)
+        {
+            Product product = _unitOfWork.Product.Get(u => u.Id == productId, includeProperties: "Category");
+            return View(product);
         }
 
         public IActionResult Privacy()
