@@ -9,12 +9,13 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Authorization;
 using System.Collections.Generic;
 using System.Data;
+using Bulky.Utility;
 
 
 namespace Bulkyweb.Areas.Admin.Controllers
 {
     [Area("Admin")]
-   // [Authorize(Roles = SD.Role_Admin)]
+    [Authorize(Roles = SD.Role_Admin)]
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
